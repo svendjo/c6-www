@@ -2,7 +2,7 @@
 Website for for Count Chocolate II.
 
 ## Local
-Node / npm is already isntalled through homebrew. Install the website.
+Node / npm is already installed through homebrew. Install the website.
 
 `npm install`
 

@@ -10,8 +10,14 @@ Start the website.
 
 `npm start`
 
-## Deployment
-todo
+## Deployment to AWS S3
+Build it.
+
+`npm run build`
+
+Copy it to S3. Sign in first.
+
+`aws s3 sync ./build s3://chocolate-frontend`
 
 # NPM README.md
 ## Getting Started with Create React App

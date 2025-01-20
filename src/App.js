@@ -24,6 +24,7 @@ function App() {
         setImage(e.target.result);
       };
       reader.readAsDataURL(file);
+      setResultText(null);
     }
   };
 
@@ -81,10 +82,6 @@ function App() {
       <header className="App-header">
         <h1>Count Chocolate II</h1>
 
-        {result !== null && resultText !== null && (
-          <ResultBubble text={getPredictionMessage()} />
-        )}
-
         <div className="controls-container">
           <input type="file" accept="image/jpeg" onChange={handleImageUpload} />
           <button onClick={handleSubmit}>Count chocolate chips</button>
@@ -94,6 +91,10 @@ function App() {
           <div className="image-container">
             <img src={image} alt="Uploaded" className="image" />
           </div>
+        )}
+
+        {result !== null && resultText !== null && (
+          <ResultBubble text={getPredictionMessage()} />
         )}
       </header>
       <footer className="footer">

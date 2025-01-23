@@ -19,6 +19,8 @@ Copy it to S3. Sign in first.
 
 `aws s3 sync ./build s3://chocolate-frontend`
 
+Go to CloudFront and create a new invalidation on /* to force it to update the distribution.
+
 # NPM README.md
 ## Getting Started with Create React App
 

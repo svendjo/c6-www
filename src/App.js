@@ -69,7 +69,6 @@ function App() {
 
   const getPredictionMessage = () => {
     if (!result || !resultText) return null;
-
     if (resultText === "Cookie") {
       return `There are ${Math.round(result)} chocolate chips in the cookie.`;
     } else {
@@ -79,8 +78,11 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="app-body">
         <h1>Count Chocolate II</h1>
+        <p>Upload an image of a cookie to count the chocolate chips.</p>
+        <p>Only JPG/JPEG images are supported.</p>
+        <p>For best results, use a clear, well-lit image of a single cookie. Do not under any circumstances upload an images of non-cookies. The count will not tolerate it.</p>
 
         <div className="controls-container">
           <input type="file" accept="image/jpeg" onChange={handleImageUpload} />
@@ -96,10 +98,8 @@ function App() {
         {result !== null && resultText !== null && (
           <ResultBubble text={getPredictionMessage()} />
         )}
-      </header>
-      <footer className="footer">
-        © 2024-2025 Svend K. Johannsen. All rights reserved.
-      </footer>
+        <div className="copyright">© 2024-2025 Svend K. Johannsen. All rights reserved. v2.1</div>
+      </div>
     </div>
   );
 }

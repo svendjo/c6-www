@@ -80,11 +80,9 @@ function App() {
     <div className="App">
       <div className="app-body">
         <h1>Count Chocolate II</h1>
-        <p>Upload an image of a cookie to count the chocolate chips.</p>
-        <p>Only JPG/JPEG images are supported.</p>
-        <p>For best results, use a clear, well-lit image of a single cookie. Do not under any circumstances upload an images of non-cookies. The count will not tolerate it.</p>
 
         <div className="controls-container">
+          <p>Upload an image of a chocolate chip cookie and the count will count the chocolate chips in it.<br/><br/>Only JPG/JPEG images are supported. For best results, use a clear, well-lit image of a single cookie. Do not upload images of non-cookies, the count will not tolerate it.</p>
           <input type="file" accept="image/jpeg" onChange={handleImageUpload} />
           <button onClick={handleSubmit}>Count chocolate chips</button>
         </div>

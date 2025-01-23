@@ -23,12 +23,26 @@ h1 {
   margin-bottom: 2rem;
 }
 
+p {
+  background: rgba(0, 0, 0, 0.7);
+  /* color: #536fff; */
+  padding: 10px 20px;
+  border: 2px solid #536fff;
+  border-radius: 8px;
+  margin: 0;
+  flex: 1;
+  min-width: 200px;
+  max-width: 400px;
+  font-size: 1rem;
+  display: flex;
+}
+
 /* Controls container for side-by-side layout */
 .controls-container {
   display: flex;
   gap: 20px;
   width: 100%;
-  max-width: 800px;
+  max-width: 1200px;
   padding: 0 20px;
   margin-bottom: 20px;
   justify-content: center;

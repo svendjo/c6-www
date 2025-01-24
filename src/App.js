@@ -24,6 +24,7 @@ function App() {
         setImage(e.target.result);
       };
       reader.readAsDataURL(file);
+      setResult(null);
       setResultText(null);
     }
   };
@@ -87,15 +88,16 @@ function App() {
           <button onClick={handleSubmit}>Count chocolate chips</button>
         </div>
 
-        {image && (
+        {result !== null && resultText !== null && (
+          <ResultBubble text={getPredictionMessage()} />
+        )}
+
+        {result !== null && resultText !== null && (
           <div className="image-container">
             <img src={image} alt="Uploaded" className="image" />
           </div>
         )}
 
-        {result !== null && resultText !== null && (
-          <ResultBubble text={getPredictionMessage()} />
-        )}
         <div className="copyright">© 2024-2025 Svend K. Johannsen. All rights reserved. v2.1</div>
       </div>
     </div>

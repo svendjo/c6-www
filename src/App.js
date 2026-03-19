@@ -98,7 +98,7 @@ function App() {
           </div>
         )}
 
-        <div className="copyright">© 2024-2025 Svend K. Johannsen. All rights reserved. v2.1</div>
+        <div className="copyright">© 2024-{new Date().getFullYear()} Svend K. Johannsen. All rights reserved. v2.1</div>
       </div>
     </div>
   );
